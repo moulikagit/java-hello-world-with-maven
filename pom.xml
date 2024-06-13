@@ -22,15 +22,15 @@
            </dependency>
        </dependencies>
        <!-- end::joda[] -->
-</build>
- </plugins>
-      </plugin>
-            <groupId>org.apache.tomcat.maven</groupId>
-            <artifactId>tomcat7-maven-plugin</artifactId>
-            <version>2.2</version>
-            <configuration>
-                <url>http://http://3.85.95.203:8080/manager/text</url> <!-- Manager URL of your Tomcat instance -->
-                <server>TomcatServer</server> <!-- Server ID configured in Maven settings.xml -->
+            </build>
+              </plugins>
+                </plugin>
+                   <groupId>org.apache.tomcat.maven</groupId>
+                   <artifactId>tomcat7-maven-plugin</artifactId>
+                   <version>2.2</version>
+                   <configuration>
+                   <url>http://http://3.85.95.203:8080/manager/text</url> <!-- Manager URL of your Tomcat instance -->
+                  <server>TomcatServer</server> <!-- Server ID configured in Maven settings.xml -->
                 <path>/opt/tomcat/</path> <!-- Context path for your application -->
             </configuration>
         </plugin>
