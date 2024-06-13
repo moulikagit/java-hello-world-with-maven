@@ -24,7 +24,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'tomcatServer', usernameVariable: 'TOMCAT_USER', passwordVariable: 'TOMCAT_PASS')]) {
                     sh """
-                    mvn tomcat7:deploy -Dtomcat.url=http://3.85.95.203:8080/manager/text \
+                    mvn tomcat7:deploy -Dtomcat.url=http://52.205.220.180:8080/manager/text \
                                        -Dtomcat.username=tomcat \
                                        -Dtomcat.password=s3cret \
                                        -DskipTests=true
