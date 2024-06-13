@@ -7,37 +7,33 @@
     <packaging>jar</packaging>
     <version>0.2.0</version>
 
-    <!-- tag::joda[] -->
-     <properties>
-           <java.version>1.8</java.version>
-           <maven.compiler.source>1.8</maven.compiler.source>
-           <maven.compiler.target>1.8</maven.compiler.target>
-     </properties>
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
-      <dependencies>
-           <dependency>
-               <groupId>joda-time</groupId>
-               <artifactId>joda-time</artifactId>
-               <version>2.2</version>
-           </dependency>
-       </dependencies>
-       <!-- end::joda[] -->
-            </build>
-                 </plugins>
-                     </plugin>
-                          <groupId>org.apache.tomcat.maven</groupId>
-                          <artifactId>tomcat7-maven-plugin</artifactId>
-                          <version>2.2</version>
-                          <configuration>
-                          <url>http://http://3.85.95.203:8080/manager/text</url> <!-- Manager URL of your Tomcat instance -->
-                           <server>TomcatServer</server> <!-- Server ID configured in Maven settings.xml -->
-                          <path>/opt/tomcat/</path> <!-- Context path for your application -->
-                         </configuration>
-                     </plugin>
-                  </plugins>
-             </build> 
-             <plugins>
-               <plugin>
+    <dependencies>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://3.85.95.203:8080/manager/text</url> <!-- Manager URL of your Tomcat instance -->
+                    <server>TomcatServer</server> <!-- Server ID configured in Maven settings.xml -->
+                    <path>/opt/tomcat/</path> <!-- Context path for your application -->
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.1</version>
