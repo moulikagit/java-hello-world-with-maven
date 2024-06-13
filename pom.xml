@@ -29,9 +29,9 @@
             <artifactId>tomcat7-maven-plugin</artifactId>
             <version>2.2</version>
             <configuration>
-                <url>http://localhost:8080/manager/text</url> <!-- Manager URL of your Tomcat instance -->
+                <url>http://http://3.85.95.203:8080/manager/text</url> <!-- Manager URL of your Tomcat instance -->
                 <server>TomcatServer</server> <!-- Server ID configured in Maven settings.xml -->
-                <path>/myapp</path> <!-- Context path for your application -->
+                <path>/opt/tomcat/</path> <!-- Context path for your application -->
             </configuration>
         </plugin>
     </plugins>
