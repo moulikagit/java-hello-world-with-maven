@@ -22,14 +22,10 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh """
-                mvn tomcat7:deploy -Dtomcat.url=http://3.85.95.203:8080/manager/text \
-                                   -Dtomcat.username=tomcat \
-                                   -Dtomcat.password=s3cret \
-                                   -DskipTests=true
-                """
+                withCredentials([usernamePassword(credentialsId: 'TomcatServer', usernameVariable: 'tomcat', passwordVariable: 's3cret')]) {
+                    sh "mvn tomcat7:deploy -Dtomcat.url=http://3.85.95.203:8080/manager/text -Dtomcat.username=$TOMCAT_USER -Dtomcat.password=$TOMCAT_PASS -DskipTests=true"
+                }
             }
         }
     }
 }
-
