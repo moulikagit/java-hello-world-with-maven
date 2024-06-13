@@ -25,7 +25,7 @@ pipeline {
                 sh """
                 mvn tomcat7:deploy -Dtomcat.url=http://3.85.95.203:8080/manager/text \
                                    -Dtomcat.username=tomcat \
-                                   -Dtomcat.password=tomcat \
+                                   -Dtomcat.password=s3cret \
                                    -DskipTests=true
                 """
             }
