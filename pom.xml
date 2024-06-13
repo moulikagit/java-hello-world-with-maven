@@ -29,7 +29,7 @@
                 <version>2.2</version>
                 <configuration>
                     <url>http://52.205.220.180:8080/manager/text</url> <!-- Manager URL of your Tomcat instance -->
-                    <server>TomcatServer</server>
+                    <server>tomcatServer</server>
                     <username>tomcat</username>
                     <password>s3cret</password>
                 </configuration>
